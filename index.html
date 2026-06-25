@@ -9,48 +9,50 @@
 <title>Top Psychic Advisors — Trusted Reviews 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --midnight: #0f0d1a;
-    --deep: #1a1630;
-    --plum: #2d2458;
-    --violet: #6c5ce7;
-    --violet-soft: #8f7ef5;
-    --violet-pale: #eceaff;
-    --gold: #c9a84c;
-    --gold-light: #f0d080;
-    --gold-pale: #fdf6e3;
-    --teal: #2dd4bf;
-    --off-white: #fafaf8;
-    --text-primary: #1a1630;
-    --text-secondary: #4a4570;
-    --text-muted: #8b87a8;
-    --border: rgba(108,92,231,0.12);
-    --border-gold: rgba(201,168,76,0.25);
-    --card-bg: #ffffff;
-    --section-alt: #f8f7fc;
+    --ink:        #2a1f1a;
+    --ink-mid:    #3d2c24;
+    --bark:       #5c3d2e;
+    --sienna:     #b8622a;
+    --sienna-soft:#c97b48;
+    --sienna-pale:#f5ede4;
+    --rose:       #c4889a;
+    --rose-pale:  #f7edf0;
+    --amber:      #c99a3a;
+    --amber-light:#e8c06a;
+    --amber-pale: #fdf5e4;
+    --linen:      #f7f2ec;
+    --linen-deep: #ede6db;
+    --text-primary:   #2a1f1a;
+    --text-secondary: #5c3d2e;
+    --text-muted:     #9e7d6a;
+    --border:         rgba(184,98,42,0.14);
+    --border-amber:   rgba(201,154,58,0.28);
+    --card-bg:        #ffffff;
+    --section-alt:    #faf5ef;
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 22px;
-    --shadow-card: 0 2px 24px rgba(108,92,231,0.07), 0 1px 4px rgba(0,0,0,0.04);
-    --shadow-hover: 0 8px 40px rgba(108,92,231,0.14), 0 2px 8px rgba(0,0,0,0.06);
+    --shadow-card: 0 2px 24px rgba(90,50,20,0.07), 0 1px 4px rgba(0,0,0,0.04);
+    --shadow-hover: 0 8px 40px rgba(90,50,20,0.13), 0 2px 8px rgba(0,0,0,0.06);
   }
 
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     color: var(--text-primary);
-    background: var(--off-white);
+    background: var(--linen);
     line-height: 1.6;
     font-size: 15px;
     -webkit-font-smoothing: antialiased;
   }
 
-  .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+  .serif { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; }
 
   /* ── ICON UTILITY ── */
   .icon {
@@ -83,7 +85,7 @@
   }
   .nav-logo-icon {
     width: 34px; height: 34px;
-    background: linear-gradient(135deg, var(--violet), var(--plum));
+    background: linear-gradient(135deg, var(--sienna), var(--bark));
     border-radius: 9px;
     display: flex; align-items: center; justify-content: center;
   }
@@ -91,7 +93,7 @@
     font-weight: 600; font-size: 15px;
     color: var(--text-primary); letter-spacing: -0.01em;
   }
-  .nav-logo-text span { color: var(--violet); }
+  .nav-logo-text span { color: var(--sienna); }
   .nav-links {
     display: flex; align-items: center;
     gap: 28px; list-style: none;
@@ -100,119 +102,255 @@
     color: var(--text-secondary); text-decoration: none;
     font-size: 14px; font-weight: 500; transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--violet); }
+  .nav-links a:hover { color: var(--sienna); }
   .nav-badge {
-    background: var(--violet-pale); color: var(--violet);
+    background: var(--sienna-pale); color: var(--sienna);
     font-size: 11px; font-weight: 600;
     padding: 4px 10px; border-radius: 20px; letter-spacing: 0.02em;
   }
 
   /* ── ANNOUNCEMENT BAR ── */
   .announcement {
-    background: linear-gradient(90deg, var(--violet) 0%, #8b5cf6 100%);
+    background: linear-gradient(90deg, var(--sienna) 0%, var(--bark) 100%);
     color: white; text-align: center;
     padding: 10px 16px; font-size: 13px;
     font-weight: 500; letter-spacing: 0.01em;
     display: flex; align-items: center;
     justify-content: center; gap: 10px;
   }
-  .announcement a { color: var(--gold-light); text-decoration: none; font-weight: 600; }
+  .announcement a { color: var(--amber-light); text-decoration: none; font-weight: 600; }
   .announcement a:hover { text-decoration: underline; }
 
   /* ── HERO ── */
   .hero {
-    background: linear-gradient(160deg, var(--midnight) 0%, var(--deep) 55%, #231a4a 100%);
-    color: white; padding: 88px 24px 108px;
+    background: linear-gradient(160deg, #1a0e08 0%, var(--ink) 30%, var(--ink-mid) 60%, #2a1510 100%);
+    color: white; padding: 110px 24px 140px;
     text-align: center; position: relative; overflow: hidden;
   }
   .hero::before {
     content: '';
     position: absolute; inset: 0;
-    background: radial-gradient(ellipse 65% 55% at 50% 0%, rgba(108,92,231,0.28) 0%, transparent 70%);
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -5%, rgba(201,154,58,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at 20% 80%, rgba(184,98,42,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 60% at 80% 70%, rgba(120,60,80,0.10) 0%, transparent 50%);
     pointer-events: none;
   }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -2px; left: 0; right: 0;
+    height: 80px;
+    background: var(--linen);
+    clip-path: ellipse(55% 100% at 50% 100%);
+    z-index: 2;
+  }
+
+  .hero-glow {
+    position: absolute; top: -120px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,154,58,0.15) 0%, rgba(184,98,42,0.08) 30%, transparent 65%);
+    pointer-events: none; border-radius: 50%;
+    animation: glow-pulse 6s ease-in-out infinite;
+  }
+  @keyframes glow-pulse {
+    0%,100%{opacity:0.7;transform:translateX(-50%) scale(1)}
+    50%{opacity:1;transform:translateX(-50%) scale(1.08)}
+  }
+
+  .hero-orb {
+    position: absolute; top: 5%; right: 8%;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle at 40% 40%, rgba(232,192,106,0.25) 0%, rgba(201,154,58,0.10) 40%, transparent 70%);
+    border-radius: 50%; pointer-events: none;
+    animation: orb-float 8s ease-in-out infinite;
+    filter: blur(2px);
+  }
+  .hero-orb::after {
+    content: ''; position: absolute; inset: 20%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.12) 0%, transparent 60%);
+  }
+  @keyframes orb-float {
+    0%,100%{transform:translateY(0) rotate(0deg)}
+    50%{transform:translateY(-20px) rotate(5deg)}
+  }
+
+  .hero-orb-small {
+    position: absolute; bottom: 18%; left: 6%;
+    width: 100px; height: 100px;
+    background: radial-gradient(circle at 40% 40%, rgba(196,136,154,0.20) 0%, transparent 65%);
+    border-radius: 50%; pointer-events: none;
+    animation: orb-float 10s ease-in-out infinite reverse;
+    filter: blur(1px);
+  }
+
   .hero-stars { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
   .star {
     position: absolute; background: white; border-radius: 50%;
     animation: twinkle var(--d,3s) infinite var(--delay,0s) ease-in-out;
   }
-  @keyframes twinkle {
-    0%,100%{opacity:.12;transform:scale(1)}
-    50%{opacity:.75;transform:scale(1.4)}
+  .star-bright {
+    position: absolute; pointer-events: none;
+    width: 4px; height: 4px; background: rgba(232,192,106,0.9); border-radius: 50%;
+    box-shadow: 0 0 6px 2px rgba(232,192,106,0.4), 0 0 12px 4px rgba(232,192,106,0.15);
+    animation: twinkle-bright var(--d,4s) infinite var(--delay,0s) ease-in-out;
   }
-  .hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+  .star-bright::before, .star-bright::after {
+    content: ''; position: absolute;
+    background: rgba(232,192,106,0.5);
+  }
+  .star-bright::before {
+    width: 12px; height: 1px; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .star-bright::after {
+    width: 1px; height: 12px; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes twinkle {
+    0%,100%{opacity:.08;transform:scale(1)}
+    50%{opacity:.65;transform:scale(1.3)}
+  }
+  @keyframes twinkle-bright {
+    0%,100%{opacity:.3;transform:scale(0.8)}
+    50%{opacity:1;transform:scale(1.2)}
+  }
+
+  .hero-particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .particle {
+    position: absolute; border-radius: 50%;
+    background: rgba(232,192,106,0.3);
+    animation: particle-drift var(--pd,12s) linear infinite;
+    filter: blur(1px);
+  }
+  @keyframes particle-drift {
+    0%{transform:translateY(0) translateX(0);opacity:0}
+    10%{opacity:1}
+    90%{opacity:1}
+    100%{transform:translateY(-100vh) translateX(30px);opacity:0}
+  }
+
+  .hero-inner { position: relative; z-index: 3; max-width: 760px; margin: 0 auto; }
   .hero-eyebrow {
     display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.14);
-    border-radius: 30px; padding: 6px 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,154,58,0.3);
+    border-radius: 30px; padding: 7px 20px;
     font-size: 11px; font-weight: 700;
     letter-spacing: 0.09em; text-transform: uppercase;
-    color: var(--gold-light); margin-bottom: 34px;
+    color: var(--amber-light); margin-bottom: 38px;
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(201,154,58,0.08);
+    animation: fadeInDown 0.7s ease both;
+  }
+  @keyframes fadeInDown {
+    from{opacity:0;transform:translateY(-12px)}
+    to{opacity:1;transform:translateY(0)}
   }
   .hero-eyebrow-dot {
-    width: 6px; height: 6px; background: var(--gold);
+    width: 7px; height: 7px; background: var(--amber);
     border-radius: 50%; animation: pulse-dot 2s infinite;
+    box-shadow: 0 0 6px rgba(201,154,58,0.6);
   }
   @keyframes pulse-dot {
-    0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,0.6)}
-    50%{box-shadow:0 0 0 6px rgba(201,168,76,0)}
+    0%,100%{box-shadow:0 0 4px 0 rgba(201,154,58,0.6)}
+    50%{box-shadow:0 0 4px 6px rgba(201,154,58,0)}
   }
   .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(44px, 7vw, 72px);
-    font-weight: 500; line-height: 1.1;
-    letter-spacing: -0.02em; margin-bottom: 22px; color: white;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(44px, 7vw, 76px);
+    font-weight: 500; line-height: 1.08;
+    letter-spacing: -0.025em; margin-bottom: 26px; color: white;
+    animation: fadeInUp 0.7s ease 0.15s both;
   }
-  .hero h1 .gold { color: var(--gold-light); font-style: italic; }
+  .hero h1 .gold {
+    color: var(--amber-light); font-style: italic;
+    text-shadow: 0 0 40px rgba(232,192,106,0.3);
+  }
   .hero-sub {
-    font-size: clamp(16px, 2.2vw, 18px);
-    color: rgba(255,255,255,0.62); line-height: 1.65;
-    max-width: 560px; margin: 0 auto 44px; font-weight: 300;
+    font-size: clamp(16px, 2.2vw, 19px);
+    color: rgba(255,255,255,0.58); line-height: 1.7;
+    max-width: 540px; margin: 0 auto 20px; font-weight: 300;
+    animation: fadeInUp 0.7s ease 0.3s both;
   }
+
+  .hero-divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 14px; margin: 0 auto 36px; max-width: 200px;
+    animation: fadeInUp 0.7s ease 0.35s both;
+  }
+  .hero-divider-line {
+    flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,154,58,0.4), transparent);
+  }
+  .hero-divider-icon {
+    width: 8px; height: 8px; position: relative;
+  }
+  .hero-divider-icon::before {
+    content: ''; position: absolute; inset: 0;
+    background: var(--amber); border-radius: 1px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 8px rgba(201,154,58,0.5);
+  }
+
   .hero-cta-group {
     display: flex; align-items: center;
-    justify-content: center; gap: 14px; flex-wrap: wrap;
+    justify-content: center; gap: 16px; flex-wrap: wrap;
+    animation: fadeInUp 0.7s ease 0.45s both;
   }
   .btn-primary {
     display: inline-flex; align-items: center; gap: 9px;
-    background: linear-gradient(135deg, var(--violet), #8b5cf6);
+    background: linear-gradient(135deg, var(--sienna), #a0522d, var(--bark));
     color: white; font-size: 15px; font-weight: 600;
-    padding: 14px 30px; border-radius: var(--radius-md);
-    text-decoration: none; transition: all 0.2s;
-    box-shadow: 0 4px 20px rgba(108,92,231,0.4);
+    padding: 15px 34px; border-radius: var(--radius-md);
+    text-decoration: none; transition: all 0.25s;
+    box-shadow: 0 4px 24px rgba(184,98,42,0.4), inset 0 1px 0 rgba(255,255,255,0.15);
     border: none; cursor: pointer;
+    position: relative; overflow: hidden;
   }
-  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 28px rgba(108,92,231,0.52); }
+  .btn-primary::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(184,98,42,0.55); }
   .btn-outline-white {
     display: inline-flex; align-items: center; gap: 7px;
-    background: transparent; color: white;
+    background: rgba(255,255,255,0.04); color: white;
     font-size: 14px; font-weight: 500;
-    padding: 13px 24px; border-radius: var(--radius-md);
-    border: 1px solid rgba(255,255,255,0.22);
-    text-decoration: none; transition: all 0.2s;
+    padding: 14px 26px; border-radius: var(--radius-md);
+    border: 1px solid rgba(255,255,255,0.18);
+    text-decoration: none; transition: all 0.25s;
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
   }
-  .btn-outline-white:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.38); }
+  .btn-outline-white:hover { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.35); transform: translateY(-1px); }
+
   .hero-stats {
     display: flex; align-items: center;
-    justify-content: center; gap: 44px;
-    margin-top: 60px; flex-wrap: wrap;
+    justify-content: center; gap: 0;
+    margin-top: 72px; flex-wrap: wrap;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px; padding: 24px 12px;
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    animation: fadeInUp 0.7s ease 0.6s both;
   }
-  .hero-stat { text-align: center; }
+  .hero-stat { text-align: center; flex: 1; min-width: 120px; padding: 4px 16px; }
   .hero-stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 33px; font-weight: 600;
-    color: var(--gold-light); line-height: 1; margin-bottom: 5px;
+    font-family: 'Fraunces', serif;
+    font-size: 36px; font-weight: 600;
+    color: var(--amber-light); line-height: 1; margin-bottom: 6px;
+    text-shadow: 0 0 20px rgba(232,192,106,0.2);
   }
   .hero-stat-label {
-    font-size: 11px; color: rgba(255,255,255,0.48);
+    font-size: 11px; color: rgba(255,255,255,0.44);
     text-transform: uppercase; letter-spacing: 0.07em; font-weight: 500;
   }
-  .hero-stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.13); }
+  .hero-stat-divider { width: 1px; height: 44px; background: rgba(255,255,255,0.10); flex-shrink: 0; }
 
   /* ── FILTER TABS ── */
   .filter-section {
-    background: white; padding: 18px 24px;
+    background: var(--linen); padding: 18px 24px;
     border-bottom: 1px solid var(--border);
     position: sticky; top: 62px; z-index: 90;
   }
@@ -229,26 +367,26 @@
   .filter-btn {
     display: inline-flex; align-items: center; gap: 7px;
     padding: 7px 16px; border-radius: 30px;
-    border: 1px solid var(--border); background: white;
+    border: 1px solid var(--border); background: var(--linen);
     color: var(--text-secondary); font-size: 13px; font-weight: 500;
     cursor: pointer; text-decoration: none; transition: all 0.15s;
   }
-  .filter-btn:hover { border-color: var(--violet); color: var(--violet); background: var(--violet-pale); }
-  .filter-btn.active { border-color: var(--violet); color: var(--violet); background: var(--violet-pale); font-weight: 600; }
+  .filter-btn:hover { border-color: var(--sienna); color: var(--sienna); background: var(--sienna-pale); }
+  .filter-btn.active { border-color: var(--sienna); color: var(--sienna); background: var(--sienna-pale); font-weight: 600; }
   .filter-btn .icon svg { stroke: currentColor; }
 
   /* ── DISCLOSURE ── */
   .disclosure-bar {
-    background: #fffbf0;
-    border-top: 1px solid var(--border-gold);
-    border-bottom: 1px solid var(--border-gold);
+    background: #fdf8f2;
+    border-top: 1px solid var(--border-amber);
+    border-bottom: 1px solid var(--border-amber);
     padding: 11px 24px; text-align: center;
   }
   .disclosure-bar p {
-    font-size: 12px; color: #7a5800;
+    font-size: 12px; color: var(--bark);
     max-width: 900px; margin: 0 auto; line-height: 1.55;
   }
-  .disclosure-bar a { color: #5a4200; font-weight: 500; }
+  .disclosure-bar a { color: var(--ink-mid); font-weight: 500; }
 
   /* ── MAIN LAYOUT ── */
   .main-wrap { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
@@ -259,7 +397,7 @@
     margin-bottom: 28px; gap: 12px; flex-wrap: wrap;
   }
   .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', serif;
     font-size: 27px; font-weight: 500;
     color: var(--text-primary); letter-spacing: -0.01em;
   }
@@ -281,7 +419,7 @@
     position: relative;
   }
   .rank-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
-  .rank-card.featured { border: 2px solid var(--violet); }
+  .rank-card.featured { border: 2px solid var(--sienna); }
   .rank-card.featured-gold { border: 2px solid var(--gold); }
 
   .card-badge-wrap { position: absolute; top: -1px; left: 22px; }
@@ -291,9 +429,9 @@
     font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
     text-transform: uppercase;
   }
-  .card-badge.featured { background: var(--violet); color: white; }
+  .card-badge.featured { background: var(--sienna); color: white; }
   .card-badge.gold { background: var(--gold); color: #3a2800; }
-  .card-badge.new-badge { background: #0d9488; color: white; }
+  .card-badge.new-badge { background: var(--rose); color: white; }
 
   .card-inner {
     display: grid; grid-template-columns: 56px 1fr auto;
@@ -301,12 +439,12 @@
   }
 
   .rank-number {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', serif;
     font-size: 38px; font-weight: 600;
     color: var(--text-muted); line-height: 1;
     opacity: 0.28; padding-right: 8px;
   }
-  .rank-card.featured .rank-number { color: var(--violet); opacity: 0.85; }
+  .rank-card.featured .rank-number { color: var(--sienna); opacity: 0.85; }
   .rank-card.featured-gold .rank-number { color: var(--gold); opacity: 0.85; }
 
   .card-body { display: flex; align-items: center; gap: 18px; min-width: 0; }
@@ -321,7 +459,7 @@
     font-weight: 700; font-size: 12.5px; color: var(--text-primary);
     text-align: center; line-height: 1.25; letter-spacing: -0.01em;
   }
-  .card-logo-text .logo-accent { color: var(--violet); }
+  .card-logo-text .logo-accent { color: var(--sienna); }
   .card-logo-text .logo-gold { color: var(--gold); }
 
   .card-info { min-width: 0; flex: 1; }
@@ -338,26 +476,26 @@
     display: inline-flex; align-items: center; gap: 5px;
     font-size: 11px; font-weight: 500;
     padding: 3px 9px; border-radius: 20px;
-    background: var(--violet-pale); color: var(--violet);
-    border: 1px solid rgba(108,92,231,0.15);
+    background: var(--sienna-pale); color: var(--sienna);
+    border: 1px solid rgba(184,98,42,0.15);
   }
   .feature-pill svg { flex-shrink: 0; }
   .feature-pill.gold-pill {
-    background: var(--gold-pale); color: #7a5c00;
-    border-color: var(--border-gold);
+    background: var(--amber-pale); color: #7a4800;
+    border-color: var(--border-amber);
   }
   .feature-pill.teal-pill {
-    background: #e0faf7; color: #0c6b62;
-    border-color: rgba(45,212,191,0.22);
+    background: var(--rose-pale); color: #7a3a4e;
+    border-color: rgba(196,136,154,0.25);
   }
 
   .card-offer {
     display: inline-flex; align-items: center; gap: 7px;
-    background: linear-gradient(90deg, #fffbee, #fff4cc);
-    border: 1px solid var(--border-gold);
+    background: linear-gradient(90deg, #fdf6ee, #faecd8);
+    border: 1px solid var(--border-amber);
     border-radius: var(--radius-sm);
     padding: 6px 12px; font-size: 12px;
-    font-weight: 600; color: #7a5800;
+    font-weight: 600; color: var(--bark);
   }
 
   .card-cta-col {
@@ -373,13 +511,13 @@
     color: var(--text-muted); margin-bottom: 2px; display: block;
   }
   .score-val {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', serif;
     font-size: 32px; font-weight: 600;
-    color: var(--violet); line-height: 1; display: block;
+    color: var(--sienna); line-height: 1; display: block;
   }
   .rank-card.featured-gold .score-val { color: var(--gold); }
   .score-stars { display: flex; justify-content: center; gap: 2px; margin-top: 3px; }
-  .score-stars svg { fill: var(--gold); }
+  .score-stars svg { fill: var(--amber); }
   .votes-text { font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 3px; }
   .votes-text strong { color: var(--text-secondary); }
 
@@ -392,20 +530,20 @@
     min-width: 132px; text-align: center;
   }
   .btn-visit.primary-cta {
-    background: linear-gradient(135deg, var(--violet), #8b5cf6);
-    color: white; box-shadow: 0 4px 14px rgba(108,92,231,0.35);
+    background: linear-gradient(135deg, var(--sienna), var(--bark));
+    color: white; box-shadow: 0 4px 14px rgba(184,98,42,0.35);
   }
-  .btn-visit.primary-cta:hover { box-shadow: 0 6px 20px rgba(108,92,231,0.5); transform: translateY(-1px); }
+  .btn-visit.primary-cta:hover { box-shadow: 0 6px 20px rgba(184,98,42,0.46); transform: translateY(-1px); }
   .btn-visit.gold-cta {
-    background: linear-gradient(135deg, var(--gold), #e6b840);
-    color: #3a2800; box-shadow: 0 4px 14px rgba(201,168,76,0.35);
+    background: linear-gradient(135deg, var(--amber), var(--amber-light));
+    color: #3a1800; box-shadow: 0 4px 14px rgba(201,154,58,0.32);
   }
-  .btn-visit.gold-cta:hover { box-shadow: 0 6px 20px rgba(201,168,76,0.5); transform: translateY(-1px); }
+  .btn-visit.gold-cta:hover { box-shadow: 0 6px 20px rgba(201,154,58,0.46); transform: translateY(-1px); }
   .btn-visit.outline-cta {
-    background: white; color: var(--violet);
-    border: 1.5px solid var(--violet);
+    background: white; color: var(--sienna);
+    border: 1.5px solid var(--sienna);
   }
-  .btn-visit.outline-cta:hover { background: var(--violet-pale); }
+  .btn-visit.outline-cta:hover { background: var(--sienna-pale); }
 
   .visitors-live {
     display: flex; align-items: center; gap: 6px;
@@ -430,7 +568,7 @@
     display: flex; align-items: center; gap: 7px;
   }
   .card-footer-link {
-    font-size: 12px; color: var(--violet);
+    font-size: 12px; color: var(--sienna);
     text-decoration: none; font-weight: 500;
   }
   .card-footer-link:hover { text-decoration: underline; }
@@ -442,11 +580,11 @@
     border-radius: 20px; padding: 5px 13px;
     font-size: 12px; color: var(--text-muted); margin-bottom: 10px;
   }
-  .updated-dot { color: var(--violet); line-height: 1; }
+  .updated-dot { color: var(--sienna); line-height: 1; }
 
   /* ── TRUST STRIP ── */
   .trust-strip {
-    background: white;
+    background: var(--linen-deep);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     padding: 32px 24px; margin: 0;
@@ -459,10 +597,10 @@
   .trust-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
   .trust-icon-wrap {
     width: 46px; height: 46px;
-    background: var(--violet-pale); border-radius: 13px;
+    background: var(--sienna-pale); border-radius: 13px;
     display: flex; align-items: center; justify-content: center;
   }
-  .trust-icon-wrap svg { stroke: var(--violet); }
+  .trust-icon-wrap svg { stroke: var(--sienna); }
   .trust-item-label { font-size: 12px; font-weight: 600; color: var(--text-secondary); line-height: 1.4; }
   .trust-item-sub { font-size: 11px; color: var(--text-muted); line-height: 1.45; }
 
@@ -471,10 +609,10 @@
   .how-inner { max-width: 900px; margin: 0 auto; }
   .section-eyebrow {
     font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--violet); margin-bottom: 13px;
+    text-transform: uppercase; color: var(--sienna); margin-bottom: 13px;
   }
   .how-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', serif;
     font-size: clamp(28px,4vw,42px); font-weight: 500;
     color: var(--text-primary); margin-bottom: 16px; letter-spacing: -0.01em;
   }
@@ -489,16 +627,16 @@
   }
   .how-icon-wrap {
     width: 42px; height: 42px;
-    background: var(--violet-pale); border-radius: 11px;
+    background: var(--sienna-pale); border-radius: 11px;
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 16px;
   }
-  .how-icon-wrap svg { stroke: var(--violet); }
+  .how-icon-wrap svg { stroke: var(--sienna); }
   .how-card-title { font-weight: 600; font-size: 14px; color: var(--text-primary); margin-bottom: 8px; }
   .how-card-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
 
   /* ── SPOTLIGHT ── */
-  .spotlight-section { padding: 72px 24px; background: white; }
+  .spotlight-section { padding: 72px 24px; background: var(--linen); }
   .spotlight-inner { max-width: 900px; margin: 0 auto; }
   .spotlight-grid {
     display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
@@ -511,29 +649,29 @@
   .spotlight-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
   .spotlight-header {
     padding: 28px 24px 22px;
-    background: linear-gradient(135deg, var(--midnight), var(--deep));
+    background: linear-gradient(135deg, var(--ink), var(--ink-mid));
     color: white; text-align: center;
   }
   .spotlight-logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', serif;
     font-size: 21px; font-weight: 600;
     margin-bottom: 10px; letter-spacing: -0.01em;
   }
   .spotlight-rating {
     display: flex; align-items: center;
     justify-content: center; gap: 8px;
-    font-size: 30px; font-family: 'Cormorant Garamond', serif;
-    font-weight: 600; color: var(--gold-light);
+    font-size: 30px; font-family: 'Fraunces', serif;
+    font-weight: 600; color: var(--amber-light);
   }
   .spotlight-body { padding: 22px 24px; }
   .spotlight-offer {
     display: flex; align-items: center; gap: 8px;
-    background: var(--gold-pale); border: 1px solid var(--border-gold);
+    background: var(--amber-pale); border: 1px solid var(--border-amber);
     border-radius: var(--radius-sm); padding: 10px 14px;
-    font-size: 13px; font-weight: 600; color: #7a5800;
+    font-size: 13px; font-weight: 600; color: var(--bark);
     margin-bottom: 18px;
   }
-  .spotlight-offer svg { stroke: #7a5800; flex-shrink: 0; }
+  .spotlight-offer svg { stroke: var(--bark); flex-shrink: 0; }
   .spotlight-points {
     list-style: none; display: flex;
     flex-direction: column; gap: 9px; margin-bottom: 22px;
@@ -543,15 +681,15 @@
     font-size: 13px; color: var(--text-secondary);
   }
   .spotlight-check { flex-shrink: 0; margin-top: 1px; }
-  .spotlight-check svg { stroke: var(--violet); }
+  .spotlight-check svg { stroke: var(--sienna); }
   .spotlight-cta {
     display: flex; align-items: center; justify-content: center; gap: 8px;
     padding: 13px; border-radius: var(--radius-md);
-    background: linear-gradient(135deg, var(--violet), #8b5cf6);
+    background: linear-gradient(135deg, var(--sienna), var(--bark));
     color: white; font-size: 14px; font-weight: 600;
     text-decoration: none; transition: all 0.2s;
   }
-  .spotlight-cta:hover { box-shadow: 0 4px 16px rgba(108,92,231,0.4); transform: translateY(-1px); }
+  .spotlight-cta:hover { box-shadow: 0 4px 16px rgba(184,98,42,0.38); transform: translateY(-1px); }
 
   /* ── FAQ ── */
   .faq-section { padding: 72px 24px; background: var(--section-alt); }
@@ -564,10 +702,10 @@
     cursor: pointer; display: flex; align-items: center;
     justify-content: space-between; gap: 12px; user-select: none;
   }
-  .faq-q:hover { color: var(--violet); }
+  .faq-q:hover { color: var(--sienna); }
   .faq-toggle {
     width: 24px; height: 24px; border-radius: 50%;
-    background: var(--violet-pale); color: var(--violet);
+    background: var(--sienna-pale); color: var(--sienna);
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0; transition: transform 0.22s;
   }
@@ -584,7 +722,7 @@
   .editorial-section { padding: 72px 24px; background: white; }
   .editorial-inner { max-width: 760px; margin: 0 auto; }
   .editorial-content h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', serif;
     font-size: clamp(22px,3vw,30px); font-weight: 500;
     color: var(--text-primary); margin: 38px 0 14px; letter-spacing: -0.01em;
   }
@@ -596,7 +734,7 @@
   .editorial-content p:last-child { margin-bottom: 0; }
 
   /* ── FOOTER ── */
-  footer { background: var(--midnight); color: rgba(255,255,255,0.58); padding: 60px 24px 34px; }
+  footer { background: var(--ink); color: rgba(255,255,255,0.58); padding: 60px 24px 34px; }
   .footer-inner {
     max-width: 1100px; margin: 0 auto;
     display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -608,7 +746,7 @@
   }
   .footer-logo-icon {
     width: 32px; height: 32px;
-    background: linear-gradient(135deg, var(--violet), var(--plum));
+    background: linear-gradient(135deg, var(--sienna), var(--bark));
     border-radius: 8px; display: flex; align-items: center; justify-content: center;
   }
   .footer-logo-text { font-weight: 600; font-size: 14px; color: white; }
@@ -636,9 +774,15 @@
   /* ── RESPONSIVE ── */
   @media(max-width:768px){
     .nav-links{display:none}
-    .hero{padding:60px 20px 80px}
-    .hero-stats{gap:22px}
+    .hero{padding:70px 20px 100px}
+    .hero::after{height:50px}
+    .hero-glow{width:400px;height:400px;top:-80px}
+    .hero-orb{width:100px;height:100px;top:3%;right:3%}
+    .hero-orb-small{width:60px;height:60px}
+    .hero-stats{gap:0;padding:18px 8px;flex-wrap:wrap}
+    .hero-stat{min-width:100px;padding:4px 10px}
     .hero-stat-divider{display:none}
+    .hero-particles{display:none}
     .filter-section{top:62px}
     .card-inner{grid-template-columns:42px 1fr;padding:22px 18px 16px}
     .card-cta-col{
@@ -674,7 +818,7 @@
   .rank-card:nth-child(7){animation-delay:0.35s}
   @media(prefers-reduced-motion:reduce){
     .rank-card{animation:none}
-    .hero-eyebrow-dot,.live-dot,.star{animation:none}
+    .hero-eyebrow-dot,.live-dot,.star,.star-bright,.particle,.hero-glow,.hero-orb,.hero-orb-small,.hero-eyebrow,.hero h1,.hero-sub,.hero-divider,.hero-cta-group,.hero-stats{animation:none}
   }
 
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -848,18 +992,42 @@
 
 <!-- HERO -->
 <header class="hero" role="banner">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-orb" aria-hidden="true"></div>
+  <div class="hero-orb-small" aria-hidden="true"></div>
+
   <div class="hero-stars" aria-hidden="true">
-    <div class="star" style="width:2px;height:2px;top:8%;left:12%;--d:2.8s;--delay:.3s"></div>
-    <div class="star" style="width:3px;height:3px;top:15%;left:30%;--d:3.5s;--delay:1s"></div>
-    <div class="star" style="width:2px;height:2px;top:22%;left:65%;--d:2.2s;--delay:.7s"></div>
-    <div class="star" style="width:2px;height:2px;top:10%;left:80%;--d:4s;--delay:.1s"></div>
-    <div class="star" style="width:3px;height:3px;top:40%;left:5%;--d:3.1s;--delay:1.5s"></div>
-    <div class="star" style="width:2px;height:2px;top:35%;left:90%;--d:2.6s;--delay:.9s"></div>
-    <div class="star" style="width:2px;height:2px;top:60%;left:20%;--d:3.8s;--delay:.4s"></div>
-    <div class="star" style="width:3px;height:3px;top:70%;left:75%;--d:2.4s;--delay:1.2s"></div>
-    <div class="star" style="width:2px;height:2px;top:55%;left:50%;--d:3.3s;--delay:.6s"></div>
-    <div class="star" style="width:2px;height:2px;top:80%;left:40%;--d:2.9s;--delay:1.8s"></div>
+    <div class="star" style="width:1px;height:1px;top:6%;left:8%;--d:3.2s;--delay:.2s"></div>
+    <div class="star" style="width:2px;height:2px;top:12%;left:22%;--d:2.8s;--delay:1.1s"></div>
+    <div class="star" style="width:1px;height:1px;top:18%;left:42%;--d:3.6s;--delay:.5s"></div>
+    <div class="star" style="width:2px;height:2px;top:9%;left:58%;--d:4.2s;--delay:1.8s"></div>
+    <div class="star" style="width:1px;height:1px;top:25%;left:72%;--d:2.5s;--delay:.3s"></div>
+    <div class="star" style="width:2px;height:2px;top:5%;left:85%;--d:3.9s;--delay:1.4s"></div>
+    <div class="star" style="width:1px;height:1px;top:38%;left:3%;--d:3.1s;--delay:.8s"></div>
+    <div class="star" style="width:2px;height:2px;top:42%;left:15%;--d:2.3s;--delay:2.1s"></div>
+    <div class="star" style="width:1px;height:1px;top:35%;left:88%;--d:4.5s;--delay:.1s"></div>
+    <div class="star" style="width:2px;height:2px;top:52%;left:32%;--d:3.4s;--delay:1.6s"></div>
+    <div class="star" style="width:1px;height:1px;top:65%;left:18%;--d:2.7s;--delay:.6s"></div>
+    <div class="star" style="width:2px;height:2px;top:58%;left:78%;--d:3.8s;--delay:1.2s"></div>
+    <div class="star" style="width:1px;height:1px;top:72%;left:55%;--d:2.9s;--delay:2.0s"></div>
+    <div class="star" style="width:2px;height:2px;top:78%;left:40%;--d:4.0s;--delay:.4s"></div>
+    <div class="star" style="width:1px;height:1px;top:85%;left:68%;--d:3.3s;--delay:1.0s"></div>
+    <div class="star" style="width:1px;height:1px;top:48%;left:95%;--d:2.6s;--delay:1.7s"></div>
+    <div class="star-bright" style="top:14%;left:48%;--d:5s;--delay:.5s"></div>
+    <div class="star-bright" style="top:30%;left:92%;--d:4.5s;--delay:2s"></div>
+    <div class="star-bright" style="top:68%;left:10%;--d:5.5s;--delay:1s"></div>
+    <div class="star-bright" style="top:82%;left:82%;--d:4s;--delay:3s"></div>
   </div>
+
+  <div class="hero-particles" aria-hidden="true">
+    <div class="particle" style="width:3px;height:3px;left:10%;bottom:-5%;--pd:14s;animation-delay:0s"></div>
+    <div class="particle" style="width:2px;height:2px;left:25%;bottom:-5%;--pd:18s;animation-delay:3s"></div>
+    <div class="particle" style="width:3px;height:3px;left:50%;bottom:-5%;--pd:12s;animation-delay:6s"></div>
+    <div class="particle" style="width:2px;height:2px;left:70%;bottom:-5%;--pd:16s;animation-delay:2s"></div>
+    <div class="particle" style="width:3px;height:3px;left:85%;bottom:-5%;--pd:20s;animation-delay:8s"></div>
+    <div class="particle" style="width:2px;height:2px;left:40%;bottom:-5%;--pd:15s;animation-delay:5s"></div>
+  </div>
+
   <div class="hero-inner">
     <div class="hero-eyebrow" role="status">
       <div class="hero-eyebrow-dot" aria-hidden="true"></div>
@@ -871,6 +1039,11 @@
     <p class="hero-sub">
       We've independently reviewed 40+ psychic platforms so you don't have to. Real ratings, honest comparisons, and verified user feedback — all in one place.
     </p>
+    <div class="hero-divider" aria-hidden="true">
+      <div class="hero-divider-line"></div>
+      <div class="hero-divider-icon"></div>
+      <div class="hero-divider-line"></div>
+    </div>
     <div class="hero-cta-group">
       <a href="#rankings" class="btn-primary">
         <svg class="icon" width="16" height="16" aria-hidden="true"><use href="#ic-arrow-right"/></svg>
@@ -981,11 +1154,11 @@
             <div class="card-features">
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-heart"/></svg> Love Readings</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-sparkle"/></svg> Clairvoyance</span>
-              <span class="feature-pill gold-pill"><svg width="10" height="10" stroke="#7a5c00"><use href="#ic-verified"/></svg> Top Screened</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#0c6b62"><use href="#ic-phone"/></svg> Phone &amp; Chat</span>
+              <span class="feature-pill gold-pill"><svg width="10" height="10" stroke="#7a4800"><use href="#ic-verified"/></svg> Top Screened</span>
+              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#7a3a4e"><use href="#ic-phone"/></svg> Phone &amp; Chat</span>
             </div>
             <div class="card-offer">
-              <svg class="icon" width="14" height="14" stroke="#7a5800"><use href="#ic-gift"/></svg>
+              <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               30 Min + 10 Min FREE — From $0.66/min
             </div>
           </div>
@@ -1026,7 +1199,7 @@
     <li class="rank-card featured-gold" aria-label="Rank 2: California Psychics">
       <div class="card-badge-wrap" aria-hidden="true">
         <span class="card-badge gold">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="#3a2800"><use href="#ic-star-fill"/></svg>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="#3a1800"><use href="#ic-star-fill"/></svg>
           Best Rated
         </span>
       </div>
@@ -1040,13 +1213,13 @@
             <div class="card-name">California Psychics</div>
             <div class="card-tagline">Hand-selected advisors with verified accuracy scores since 1995</div>
             <div class="card-features">
-              <span class="feature-pill gold-pill"><svg width="10" height="10" stroke="#7a5c00"><use href="#ic-verified"/></svg> Verified Reviews</span>
+              <span class="feature-pill gold-pill"><svg width="10" height="10" stroke="#7a4800"><use href="#ic-verified"/></svg> Verified Reviews</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-target"/></svg> Top Accuracy</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-cards"/></svg> Tarot Masters</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#0c6b62"><use href="#ic-clock"/></svg> Est. 1995</span>
+              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#7a3a4e"><use href="#ic-clock"/></svg> Est. 1995</span>
             </div>
             <div class="card-offer">
-              <svg class="icon" width="14" height="14" stroke="#7a5800"><use href="#ic-gift"/></svg>
+              <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               $10 FREE (Code "NEW10") + 80% OFF First Session
             </div>
           </div>
@@ -1054,7 +1227,7 @@
         <div class="card-cta-col">
           <div class="score-wrap" aria-label="Score: 9.6 out of 10, Excellent">
             <span class="score-label">Our Score</span>
-            <span class="score-val" style="color:var(--gold)">9.6</span>
+            <span class="score-val" style="color:var(--amber)">9.6</span>
             <div class="score-stars" aria-hidden="true">
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
@@ -1066,7 +1239,7 @@
           </div>
           <a href="https://10bestpsychicreaders.com/redirect/333/25890/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit gold-cta" target="_blank" rel="sponsored noopener" aria-label="Visit California Psychics — opens in new tab">
             Visit Site
-            <svg class="icon" width="14" height="14" stroke="#3a2800"><use href="#ic-external"/></svg>
+            <svg class="icon" width="14" height="14" stroke="#3a1800"><use href="#ic-external"/></svg>
           </a>
           <div class="visitors-live" aria-live="polite">
             <div class="live-dot" aria-hidden="true"></div>
@@ -1089,7 +1262,7 @@
         <div class="rank-number" aria-label="Rank 3">3</div>
         <div class="card-body">
           <div class="card-logo-wrap" aria-label="Purple Garden logo">
-            <div class="card-logo-text" style="color:#7c3aed">Purple<br>Garden</div>
+            <div class="card-logo-text" style="color:var(--sienna)">Purple<br>Garden</div>
           </div>
           <div class="card-info">
             <div class="card-name">Purple Garden</div>
@@ -1097,11 +1270,11 @@
             <div class="card-features">
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-moon"/></svg> Astrology</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-cards"/></svg> Tarot</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#0c6b62"><use href="#ic-chat"/></svg> Chat &amp; Video</span>
+              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#7a3a4e"><use href="#ic-chat"/></svg> Chat &amp; Video</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-sparkle"/></svg> Clairvoyants</span>
             </div>
             <div class="card-offer">
-              <svg class="icon" width="14" height="14" stroke="#7a5800"><use href="#ic-gift"/></svg>
+              <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               $30 FREE on Your First Reading
             </div>
           </div>
@@ -1140,7 +1313,7 @@
         <div class="rank-number" aria-label="Rank 4">4</div>
         <div class="card-body">
           <div class="card-logo-wrap" aria-label="Keen Psychics logo">
-            <div class="card-logo-text" style="color:#e8567a;font-size:17px;font-weight:800;letter-spacing:0.04em">KEEN</div>
+            <div class="card-logo-text" style="color:var(--rose);font-size:17px;font-weight:800;letter-spacing:0.04em">KEEN</div>
           </div>
           <div class="card-info">
             <div class="card-name">Keen Psychics</div>
@@ -1148,11 +1321,11 @@
             <div class="card-features">
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-phone"/></svg> Phone 24/7</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-chat"/></svg> Live Chat</span>
-              <span class="feature-pill gold-pill"><svg width="10" height="10" stroke="#7a5c00"><use href="#ic-clock"/></svg> 20+ Years</span>
+              <span class="feature-pill gold-pill"><svg width="10" height="10" stroke="#7a4800"><use href="#ic-clock"/></svg> 20+ Years</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-heart"/></svg> Relationship Experts</span>
             </div>
             <div class="card-offer">
-              <svg class="icon" width="14" height="14" stroke="#7a5800"><use href="#ic-gift"/></svg>
+              <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               5 Minutes For Just $1 — New Users Only
             </div>
           </div>
@@ -1199,11 +1372,11 @@
             <div class="card-features">
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-sparkle"/></svg> Mediums</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-cards"/></svg> Tarot</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#0c6b62"><use href="#ic-thumbs-up"/></svg> Money-Back</span>
+              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#7a3a4e"><use href="#ic-thumbs-up"/></svg> Money-Back</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-verified"/></svg> Qualified Readers</span>
             </div>
             <div class="card-offer">
-              <svg class="icon" width="14" height="14" stroke="#7a5800"><use href="#ic-gift"/></svg>
+              <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               $0.83/min + 5 Minutes FREE for New Customers
             </div>
           </div>
@@ -1217,7 +1390,7 @@
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
-              <svg width="11" height="11" fill="none" stroke="var(--gold)" stroke-width="1.8"><use href="#ic-star-empty"/></svg>
+              <svg width="11" height="11" fill="none" stroke="var(--amber)" stroke-width="1.8"><use href="#ic-star-empty"/></svg>
             </div>
             <div class="votes-text"><strong>23,613</strong> votes</div>
           </div>
@@ -1248,7 +1421,7 @@
         <div class="rank-number" aria-label="Rank 6">6</div>
         <div class="card-body">
           <div class="card-logo-wrap" aria-label="Spiritual Blossom logo">
-            <div class="card-logo-text" style="color:#059669">Spiritual<br>Blossom</div>
+            <div class="card-logo-text" style="color:var(--bark)">Spiritual<br>Blossom</div>
           </div>
           <div class="card-info">
             <div class="card-name">Spiritual Blossom</div>
@@ -1256,11 +1429,11 @@
             <div class="card-features">
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-moon"/></svg> Astrology</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-cards"/></svg> Tarot</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#0c6b62"><use href="#ic-leaf"/></svg> Holistic</span>
+              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#7a3a4e"><use href="#ic-leaf"/></svg> Holistic</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-crystal"/></svg> Psychic Guidance</span>
             </div>
             <div class="card-offer">
-              <svg class="icon" width="14" height="14" stroke="#7a5800"><use href="#ic-gift"/></svg>
+              <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               Deposit $10 &amp; Receive an Additional $4 Credit
             </div>
           </div>
@@ -1274,7 +1447,7 @@
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
-              <svg width="11" height="11" fill="none" stroke="var(--gold)" stroke-width="1.8"><use href="#ic-star-empty"/></svg>
+              <svg width="11" height="11" fill="none" stroke="var(--amber)" stroke-width="1.8"><use href="#ic-star-empty"/></svg>
             </div>
             <div class="votes-text"><strong>21,446</strong> votes</div>
           </div>
@@ -1299,7 +1472,7 @@
         <div class="rank-number" aria-label="Rank 7">7</div>
         <div class="card-body">
           <div class="card-logo-wrap" aria-label="Kasamba logo">
-            <div class="card-logo-text" style="color:#b45309;font-weight:800;letter-spacing:0.04em">KASAMBA</div>
+            <div class="card-logo-text" style="color:var(--sienna);font-weight:800;letter-spacing:0.04em">KASAMBA</div>
           </div>
           <div class="card-info">
             <div class="card-name">Kasamba</div>
@@ -1307,11 +1480,11 @@
             <div class="card-features">
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-lock"/></svg> 100% Private</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-sparkle"/></svg> Mediums</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#0c6b62"><use href="#ic-chat"/></svg> Chat Sessions</span>
+              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#7a3a4e"><use href="#ic-chat"/></svg> Chat Sessions</span>
               <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-cards"/></svg> Tarot</span>
             </div>
             <div class="card-offer">
-              <svg class="icon" width="14" height="14" stroke="#7a5800"><use href="#ic-gift"/></svg>
+              <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               3 Free Minutes + 50% OFF First Session
             </div>
           </div>
@@ -1325,7 +1498,7 @@
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
               <svg width="11" height="11"><use href="#ic-star-fill"/></svg>
-              <svg width="11" height="11" fill="none" stroke="var(--gold)" stroke-width="1.8"><use href="#ic-star-empty"/></svg>
+              <svg width="11" height="11" fill="none" stroke="var(--amber)" stroke-width="1.8"><use href="#ic-star-empty"/></svg>
             </div>
             <div class="votes-text"><strong>24,954</strong> votes</div>
           </div>
@@ -1443,7 +1616,7 @@
           <div class="spotlight-logo">Psychic Source</div>
           <div class="spotlight-rating">
             <span aria-label="9.8 out of 10">9.8</span>
-            <svg width="22" height="22" fill="#c9a84c" aria-hidden="true"><use href="#ic-star-fill"/></svg>
+            <svg width="22" height="22" fill="var(--amber)" aria-hidden="true"><use href="#ic-star-fill"/></svg>
           </div>
         </div>
         <div class="spotlight-body">
@@ -1466,11 +1639,11 @@
       </article>
 
       <article class="spotlight-card" aria-label="California Psychics spotlight">
-        <div class="spotlight-header" style="background:linear-gradient(135deg,#2d1f00,#5a3f00)">
+        <div class="spotlight-header" style="background:linear-gradient(135deg,#2a1f1a,#3d2c24)">
           <div class="spotlight-logo">California Psychics</div>
           <div class="spotlight-rating" style="color:var(--gold-light)">
             <span aria-label="9.6 out of 10">9.6</span>
-            <svg width="22" height="22" fill="#c9a84c" aria-hidden="true"><use href="#ic-star-fill"/></svg>
+            <svg width="22" height="22" fill="var(--amber)" aria-hidden="true"><use href="#ic-star-fill"/></svg>
           </div>
         </div>
         <div class="spotlight-body">
@@ -1485,19 +1658,19 @@
             <li><span class="spotlight-check"><svg width="14" height="14" stroke="currentColor"><use href="#ic-check"/></svg></span>Flexible pricing with multiple tier options</li>
             <li><span class="spotlight-check"><svg width="14" height="14" stroke="currentColor"><use href="#ic-check"/></svg></span>Risk-free: money-back satisfaction guarantee</li>
           </ul>
-          <a href="https://10bestpsychicreaders.com/redirect/333/25890/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="spotlight-cta" target="_blank" rel="sponsored noopener" style="background:linear-gradient(135deg,var(--gold),#e6b840);color:#3a2800" aria-label="Visit California Psychics — exclusive offer">
+          <a href="https://10bestpsychicreaders.com/redirect/333/25890/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="spotlight-cta" target="_blank" rel="sponsored noopener" style="background:linear-gradient(135deg,var(--amber),var(--amber-light));color:#3a1800" aria-label="Visit California Psychics — exclusive offer">
             Claim Exclusive Offer
-            <svg class="icon" width="14" height="14" stroke="#3a2800"><use href="#ic-arrow-right"/></svg>
+            <svg class="icon" width="14" height="14" stroke="#3a1800"><use href="#ic-arrow-right"/></svg>
           </a>
         </div>
       </article>
 
       <article class="spotlight-card" aria-label="Purple Garden spotlight">
-        <div class="spotlight-header" style="background:linear-gradient(135deg,#1e0a3c,#4c1d95)">
+        <div class="spotlight-header" style="background:linear-gradient(135deg,#2a1f1a,#5c3d2e)">
           <div class="spotlight-logo">Purple Garden</div>
           <div class="spotlight-rating">
             <span aria-label="9.3 out of 10">9.3</span>
-            <svg width="22" height="22" fill="#c9a84c" aria-hidden="true"><use href="#ic-star-fill"/></svg>
+            <svg width="22" height="22" fill="var(--amber)" aria-hidden="true"><use href="#ic-star-fill"/></svg>
           </div>
         </div>
         <div class="spotlight-body">
@@ -1512,7 +1685,7 @@
             <li><span class="spotlight-check"><svg width="14" height="14" stroke="currentColor"><use href="#ic-check"/></svg></span>Specialties: love, astrology, tarot, dream analysis</li>
             <li><span class="spotlight-check"><svg width="14" height="14" stroke="currentColor"><use href="#ic-check"/></svg></span>No appointment needed — connect instantly</li>
           </ul>
-          <a href="https://10bestpsychicreaders.com/redirect/364/25610/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="spotlight-cta" target="_blank" rel="sponsored noopener" style="background:linear-gradient(135deg,#7c3aed,#9b59b6)" aria-label="Visit Purple Garden — exclusive offer">
+          <a href="https://10bestpsychicreaders.com/redirect/364/25610/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="spotlight-cta" target="_blank" rel="sponsored noopener" style="background:linear-gradient(135deg,var(--sienna),var(--bark))" aria-label="Visit Purple Garden — exclusive offer">
             Claim Exclusive Offer
             <svg class="icon" width="14" height="14" stroke="white"><use href="#ic-arrow-right"/></svg>
           </a>
