@@ -545,6 +545,23 @@
   }
   .btn-visit.outline-cta:hover { background: var(--sienna-pale); }
 
+  .btn-call {
+    display: inline-flex; align-items: center;
+    justify-content: center; gap: 6px;
+    padding: 11px 22px; border-radius: var(--radius-md);
+    text-decoration: none; font-size: 14px; font-weight: 600;
+    transition: all 0.2s; white-space: nowrap;
+    background: white; color: var(--text-primary);
+    border: 1.5px solid var(--border);
+  }
+  .btn-call:hover { border-color: var(--sienna); color: var(--sienna); }
+  .btn-call svg { stroke: currentColor; }
+
+  .card-btns {
+    display: flex; flex-direction: column;
+    align-items: flex-end; gap: 8px;
+  }
+
   .visitors-live {
     display: flex; align-items: center; gap: 6px;
     font-size: 11px; color: var(--text-muted); white-space: nowrap;
@@ -819,11 +836,15 @@
     .score-stars{display:flex;justify-content:center;gap:2px;margin-top:3px}
     .votes-text{margin-top:4px}
 
-    .btn-visit{
+    .card-btns{
       grid-column:1;grid-row:3;
-      width:100%;min-width:unset;
-      margin-top:14px;padding:14px 20px;
-      justify-content:center;
+      display:flex;flex-direction:row;
+      gap:10px;width:100%;margin-top:14px;
+    }
+    .card-btns .btn-visit,
+    .card-btns .btn-call{
+      flex:1;width:auto;min-width:unset;
+      padding:14px 12px;justify-content:center;
     }
 
     .visitors-live{
@@ -1221,10 +1242,16 @@
             </div>
             <div class="votes-text"><strong>33,952</strong> votes</div>
           </div>
-          <a href="https://10bestpsychicreaders.com/redirect/363/25200/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit primary-cta" target="_blank" rel="sponsored noopener" aria-label="Visit Psychic Source — opens in new tab">
-            Visit Site
-            <svg class="icon" width="14" height="14" stroke="white"><use href="#ic-external"/></svg>
+          <div class="card-btns">
+            <a href="tel:8556152215" class="btn-call" aria-label="Call Psychic Source">
+              <svg class="icon" width="14" height="14"><use href="#ic-phone"/></svg>
+              Call Now
+            </a>
+            <a href="https://10bestpsychicreaders.com/redirect/363/25200/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit primary-cta" target="_blank" rel="sponsored noopener" aria-label="Connect with Psychic Source — opens in new tab">
+            Connect Now
+            <svg class="icon" width="14" height="14" stroke="white"><use href="#ic-arrow-right"/></svg>
           </a>
+          </div>
           <div class="visitors-live" aria-live="polite">
             <div class="live-dot" aria-hidden="true"></div>
             1,328 visiting now
@@ -1282,10 +1309,16 @@
             </div>
             <div class="votes-text"><strong>35,290</strong> votes</div>
           </div>
-          <a href="https://10bestpsychicreaders.com/redirect/333/25890/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit gold-cta" target="_blank" rel="sponsored noopener" aria-label="Visit California Psychics — opens in new tab">
-            Visit Site
-            <svg class="icon" width="14" height="14" stroke="#2a1010"><use href="#ic-external"/></svg>
+          <div class="card-btns">
+            <a href="tel:8665471428" class="btn-call" aria-label="Call California Psychics">
+              <svg class="icon" width="14" height="14"><use href="#ic-phone"/></svg>
+              Call Now
+            </a>
+            <a href="https://10bestpsychicreaders.com/redirect/333/25890/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit gold-cta" target="_blank" rel="sponsored noopener" aria-label="Claim California Psychics offer — opens in new tab">
+            Claim Offer
+            <svg class="icon" width="14" height="14" stroke="#2a1010"><use href="#ic-arrow-right"/></svg>
           </a>
+          </div>
           <div class="visitors-live" aria-live="polite">
             <div class="live-dot" aria-hidden="true"></div>
             2,041 visiting now
@@ -1337,10 +1370,12 @@
             </div>
             <div class="votes-text"><strong>32,319</strong> votes</div>
           </div>
-          <a href="https://10bestpsychicreaders.com/redirect/364/25610/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Visit Purple Garden — opens in new tab">
-            Visit Site
-            <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-external"/></svg>
+          <div class="card-btns">
+            <a href="https://10bestpsychicreaders.com/redirect/364/25610/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Get $30 free at Purple Garden — opens in new tab">
+            Get $30 Free
+            <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-arrow-right"/></svg>
           </a>
+          </div>
         </div>
       </div>
       <div class="card-footer">
@@ -1388,10 +1423,12 @@
             </div>
             <div class="votes-text"><strong>29,002</strong> votes</div>
           </div>
-          <a href="https://10bestpsychicreaders.com/redirect/358/24923/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Visit Keen Psychics — opens in new tab">
-            Visit Site
-            <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-external"/></svg>
+          <div class="card-btns">
+            <a href="https://10bestpsychicreaders.com/redirect/358/24923/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Start reading at Keen for $1 — opens in new tab">
+            Start for $1
+            <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-arrow-right"/></svg>
           </a>
+          </div>
         </div>
       </div>
       <div class="card-footer">
@@ -1439,10 +1476,16 @@
             </div>
             <div class="votes-text"><strong>23,613</strong> votes</div>
           </div>
-          <a href="https://10bestpsychicreaders.com/redirect/360/14144/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Visit PathForward — opens in new tab">
-            Visit Site
-            <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-external"/></svg>
+          <div class="card-btns">
+            <a href="tel:8662899938" class="btn-call" aria-label="Call PathForward">
+              <svg class="icon" width="14" height="14"><use href="#ic-phone"/></svg>
+              Call Now
+            </a>
+            <a href="https://10bestpsychicreaders.com/redirect/360/14144/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Try PathForward free — opens in new tab">
+            Try 5 Min Free
+            <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-arrow-right"/></svg>
           </a>
+          </div>
         </div>
       </div>
       <div class="card-footer">
@@ -1496,10 +1539,12 @@
             </div>
             <div class="votes-text"><strong>21,446</strong> votes</div>
           </div>
-          <a href="https://10bestpsychicreaders.com/redirect/20172/24299/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Visit Spiritual Blossom — opens in new tab">
-            Visit Site
-            <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-external"/></svg>
+          <div class="card-btns">
+            <a href="https://10bestpsychicreaders.com/redirect/20172/24299/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Get started with Spiritual Blossom — opens in new tab">
+            Get Started
+            <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-arrow-right"/></svg>
           </a>
+          </div>
         </div>
       </div>
       <div class="card-footer">
@@ -1547,10 +1592,12 @@
             </div>
             <div class="votes-text"><strong>24,954</strong> votes</div>
           </div>
-          <a href="https://10bestpsychicreaders.com/redirect/353/27466/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Visit Kasamba — opens in new tab">
-            Visit Site
-            <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-external"/></svg>
+          <div class="card-btns">
+            <a href="https://10bestpsychicreaders.com/redirect/353/27466/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Save 50% at Kasamba — opens in new tab">
+            Save 50% Now
+            <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-arrow-right"/></svg>
           </a>
+          </div>
         </div>
       </div>
       <div class="card-footer">
