@@ -429,9 +429,9 @@
     font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
     text-transform: uppercase;
   }
-  .card-badge.featured { background: var(--sienna); color: white; }
-  .card-badge.gold { background: var(--amber); color: #4a1a1e; }
-  .card-badge.new-badge { background: var(--rose); color: white; }
+  .card-badge.featured { background: #059669; color: white; }
+  .card-badge.gold { background: #d97706; color: white; }
+  .card-badge.new-badge { background: #dc2626; color: white; }
 
   .card-inner {
     display: grid; grid-template-columns: 56px 1fr auto;
@@ -447,47 +447,39 @@
   .rank-card.featured .rank-number { color: var(--sienna); opacity: 0.85; }
   .rank-card.featured-gold .rank-number { color: var(--amber); opacity: 0.85; }
 
-  .card-body { display: flex; align-items: center; gap: 18px; min-width: 0; }
+  .card-body { display: flex; flex-direction: column; gap: 0; min-width: 0; }
 
   .card-logo-wrap {
-    flex-shrink: 0; width: 112px; height: 54px;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--section-alt); border-radius: var(--radius-sm);
-    padding: 8px 12px; border: 1px solid var(--border);
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 14px;
+  }
+  .card-logo-img {
+    height: 40px; width: auto; max-width: 180px;
+    object-fit: contain;
   }
   .card-logo-text {
     font-weight: 700; font-size: 12.5px; color: var(--text-primary);
     text-align: center; line-height: 1.25; letter-spacing: -0.01em;
   }
-  .card-logo-text .logo-accent { color: var(--sienna); }
-  .card-logo-text .logo-gold { color: var(--amber); }
 
   .card-info { min-width: 0; flex: 1; }
   .card-name {
     font-weight: 600; font-size: 16px;
-    color: var(--text-primary); margin-bottom: 3px; letter-spacing: -0.01em;
+    color: var(--text-primary); margin-bottom: 8px; letter-spacing: -0.01em;
   }
-  .card-tagline {
-    font-size: 13px; color: var(--text-secondary);
-    margin-bottom: 10px; line-height: 1.4;
+  .card-desc {
+    font-size: 13.5px; color: var(--text-secondary);
+    line-height: 1.55; margin-bottom: 12px;
   }
-  .card-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 11px; }
-  .feature-pill {
-    display: inline-flex; align-items: center; gap: 5px;
-    font-size: 11px; font-weight: 500;
-    padding: 3px 9px; border-radius: 20px;
-    background: var(--sienna-pale); color: var(--sienna);
-    border: 1px solid rgba(192,57,43,0.15);
+  .card-points {
+    list-style: none; display: flex;
+    flex-direction: column; gap: 6px; margin-bottom: 14px;
   }
-  .feature-pill svg { flex-shrink: 0; }
-  .feature-pill.gold-pill {
-    background: var(--amber-pale); color: #7a2020;
-    border-color: var(--border-amber);
+  .card-points li {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 13px; color: var(--text-secondary); line-height: 1.4;
   }
-  .feature-pill.teal-pill {
-    background: var(--rose-pale); color: #6a2828;
-    border-color: rgba(168,58,58,0.20);
-  }
+  .card-points li svg { flex-shrink: 0; margin-top: 2px; stroke: #059669; }
 
   .card-offer {
     display: inline-flex; align-items: center; gap: 7px;
@@ -804,57 +796,58 @@
 
     .card-inner{
       display:grid;
-      grid-template-columns:1fr;
+      grid-template-columns:1fr auto;
       padding:38px 16px 16px;
       gap:0;
     }
     .rank-number{display:none}
 
-    .card-body{
-      grid-column:1;grid-row:1;
-      display:flex;align-items:flex-start;gap:12px;
-      min-width:0;
-    }
-    .card-logo-wrap{width:72px;height:40px;flex-shrink:0}
-    .card-info{flex:1;min-width:0}
-    .card-name{font-size:15px}
-    .card-tagline{font-size:12.5px;margin-bottom:8px}
-    .card-features{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
-    .feature-pill{font-size:10px;padding:2px 7px}
-    .card-offer{font-size:11.5px;padding:5px 10px}
-
+    .card-body{display:contents}
     .card-cta-col{display:contents}
 
+    .card-logo-wrap{
+      grid-column:1;grid-row:1;
+      width:auto;height:auto;
+      margin-bottom:14px;
+    }
+    .card-logo-img{height:36px}
+
     .score-wrap{
-      grid-column:1;grid-row:2;
-      margin-top:14px;padding-top:14px;
-      border-top:1px solid var(--border);
-      text-align:center;min-width:unset;
+      grid-column:2;grid-row:1;
+      align-self:center;
+      padding-left:14px;
+      text-align:center;min-width:74px;
     }
     .score-label{margin-bottom:2px;display:block}
-    .score-val{font-size:30px}
+    .score-val{font-size:28px}
     .score-stars{display:flex;justify-content:center;gap:2px;margin-top:3px}
     .votes-text{margin-top:4px}
 
-    .card-btns{
-      grid-column:1;grid-row:3;
-      display:flex;flex-direction:row;
-      gap:10px;width:100%;margin-top:14px;
+    .card-info{
+      grid-column:1/-1;grid-row:2;
+      min-width:0;
     }
-    .card-btns .btn-visit,
-    .card-btns .btn-call{
-      flex:1;width:auto;min-width:unset;
-      padding:14px 12px;justify-content:center;
+    .card-name{font-size:15px;margin-bottom:6px}
+    .card-desc{font-size:13px;margin-bottom:10px}
+    .card-points{gap:5px;margin-bottom:10px}
+    .card-points li{font-size:12.5px}
+    .card-offer{font-size:11.5px;padding:5px 10px}
+
+    .btn-visit{
+      grid-column:1/-1;grid-row:3;
+      width:100%;min-width:unset;
+      margin-top:14px;padding:14px 20px;
+      justify-content:center;
     }
 
     .visitors-live{
-      grid-column:1;grid-row:4;
+      grid-column:1/-1;grid-row:4;
       justify-content:center;
       margin-top:10px;padding-top:10px;
       border-top:1px solid var(--border);
     }
 
-    .card-footer{flex-direction:column;align-items:flex-start;gap:6px;padding:10px 16px}
+    .card-footer{flex-direction:row;align-items:center;justify-content:space-between;gap:6px;padding:10px 16px}
 
     .footer-inner{grid-template-columns:1fr 1fr}
     .footer-brand{grid-column:1/-1}
@@ -862,9 +855,6 @@
   @media(max-width:480px){
     .footer-inner{grid-template-columns:1fr}
     .hero h1{font-size:38px}
-    .card-body{flex-direction:column;gap:8px}
-    .card-logo-wrap{width:100%;height:46px}
-    .feature-pill{font-size:9.5px}
     .score-wrap{min-width:70px;padding-left:10px}
     .score-val{font-size:26px}
   }
@@ -1211,18 +1201,17 @@
       <div class="card-inner">
         <div class="rank-number" aria-label="Rank 1">1</div>
         <div class="card-body">
-          <div class="card-logo-wrap" aria-label="Psychic Source logo">
-            <div class="card-logo-text"><span class="logo-accent">Psychic</span><br>Source</div>
+          <div class="card-logo-wrap">
+            <img class="card-logo-img" src="https://www.google.com/s2/favicons?domain=psychicsource.com&sz=128" alt="Psychic Source">
+            <div class="card-logo-text">PSYCHIC SOURCE</div>
           </div>
           <div class="card-info">
             <div class="card-name">Psychic Source</div>
-            <div class="card-tagline">America's most established psychic network since 1989</div>
-            <div class="card-features">
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-heart"/></svg> Love Readings</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-sparkle"/></svg> Clairvoyance</span>
-              <span class="feature-pill gold-pill"><svg width="10" height="10" stroke="#7a2020"><use href="#ic-verified"/></svg> Top Screened</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#6a2828"><use href="#ic-phone"/></svg> Phone &amp; Chat</span>
-            </div>
+            <p class="card-desc">America's most trusted psychic network since 1989. Rigorously screened advisors deliver accurate readings via phone, chat, and video.</p>
+            <ul class="card-points">
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> Over 30 years of experience in psychic readings</li>
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> 100% satisfaction guarantee on every session</li>
+            </ul>
             <div class="card-offer">
               <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               30 Min + 10 Min FREE — From $0.66/min
@@ -1242,16 +1231,10 @@
             </div>
             <div class="votes-text"><strong>33,952</strong> votes</div>
           </div>
-          <div class="card-btns">
-            <a href="tel:8556152215" class="btn-call" aria-label="Call Psychic Source">
-              <svg class="icon" width="14" height="14"><use href="#ic-phone"/></svg>
-              Call Now
-            </a>
-            <a href="https://10bestpsychicreaders.com/redirect/363/25200/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit primary-cta" target="_blank" rel="sponsored noopener" aria-label="Connect with Psychic Source — opens in new tab">
+          <a href="https://10bestpsychicreaders.com/redirect/363/25200/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit primary-cta" target="_blank" rel="sponsored noopener">
             Connect Now
             <svg class="icon" width="14" height="14" stroke="white"><use href="#ic-arrow-right"/></svg>
           </a>
-          </div>
           <div class="visitors-live" aria-live="polite">
             <div class="live-dot" aria-hidden="true"></div>
             1,328 visiting now
@@ -1259,6 +1242,7 @@
         </div>
       </div>
       <div class="card-footer">
+        <a href="https://10bestpsychicreaders.com/redirect/363/25200/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="card-footer-link" target="_blank" rel="sponsored noopener">Visit Site ↗</a>
         <a href="#psychic-source-review" class="card-footer-link">Read full review →</a>
       </div>
     </li>
@@ -1267,25 +1251,23 @@
     <li class="rank-card featured-gold" aria-label="Rank 2: California Psychics">
       <div class="card-badge-wrap" aria-hidden="true">
         <span class="card-badge gold">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="#2a1010"><use href="#ic-star-fill"/></svg>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="white"><use href="#ic-star-fill"/></svg>
           Best Rated
         </span>
       </div>
       <div class="card-inner">
         <div class="rank-number" aria-label="Rank 2">2</div>
         <div class="card-body">
-          <div class="card-logo-wrap" aria-label="California Psychics logo">
-            <div class="card-logo-text"><span class="logo-gold">California</span><br>Psychics</div>
+          <div class="card-logo-wrap">
+            <img class="card-logo-img" src="https://images.ctfassets.net/cxdm8ncfc8vx/1sqFFpmOmYtSQynuXDqlYI/306f7bd13687b1f77170c0751c7a31c6/CP_long_with_tag.png" alt="California Psychics">
           </div>
           <div class="card-info">
             <div class="card-name">California Psychics</div>
-            <div class="card-tagline">Hand-selected advisors with verified accuracy scores since 1995</div>
-            <div class="card-features">
-              <span class="feature-pill gold-pill"><svg width="10" height="10" stroke="#7a2020"><use href="#ic-verified"/></svg> Verified Reviews</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-target"/></svg> Top Accuracy</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-cards"/></svg> Tarot Masters</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#6a2828"><use href="#ic-clock"/></svg> Est. 1995</span>
-            </div>
+            <p class="card-desc">Premium psychic advisory service with hand-selected readers known for verified accuracy scores. Trusted by millions since 1995.</p>
+            <ul class="card-points">
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> Over 25 years of experience in readings</li>
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> Rigorous screening — only 2% of applicants accepted</li>
+            </ul>
             <div class="card-offer">
               <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               $10 FREE (Code "NEW10") + 80% OFF First Session
@@ -1305,16 +1287,10 @@
             </div>
             <div class="votes-text"><strong>35,290</strong> votes</div>
           </div>
-          <div class="card-btns">
-            <a href="tel:8665471428" class="btn-call" aria-label="Call California Psychics">
-              <svg class="icon" width="14" height="14"><use href="#ic-phone"/></svg>
-              Call Now
-            </a>
-            <a href="https://10bestpsychicreaders.com/redirect/333/25890/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit gold-cta" target="_blank" rel="sponsored noopener" aria-label="Claim California Psychics offer — opens in new tab">
-            Claim Offer
-            <svg class="icon" width="14" height="14" stroke="#2a1010"><use href="#ic-arrow-right"/></svg>
+          <a href="https://10bestpsychicreaders.com/redirect/333/25890/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit gold-cta" target="_blank" rel="sponsored noopener">
+            Connect Now
+            <svg class="icon" width="14" height="14" stroke="#3a1800"><use href="#ic-arrow-right"/></svg>
           </a>
-          </div>
           <div class="visitors-live" aria-live="polite">
             <div class="live-dot" aria-hidden="true"></div>
             2,041 visiting now
@@ -1322,6 +1298,7 @@
         </div>
       </div>
       <div class="card-footer">
+        <a href="https://10bestpsychicreaders.com/redirect/333/25890/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="card-footer-link" target="_blank" rel="sponsored noopener">Visit Site ↗</a>
         <a href="#california-review" class="card-footer-link">Read full review →</a>
       </div>
     </li>
@@ -1331,18 +1308,17 @@
       <div class="card-inner">
         <div class="rank-number" aria-label="Rank 3">3</div>
         <div class="card-body">
-          <div class="card-logo-wrap" aria-label="Purple Garden logo">
-            <div class="card-logo-text" style="color:var(--sienna)">Purple<br>Garden</div>
+          <div class="card-logo-wrap">
+            <img class="card-logo-img" src="https://www.google.com/s2/favicons?domain=purplegarden.co&sz=128" alt="Purple Garden">
+            <div class="card-logo-text">PURPLE GARDEN</div>
           </div>
           <div class="card-info">
             <div class="card-name">Purple Garden</div>
-            <div class="card-tagline">900+ vetted psychics with 91.5% prediction accuracy</div>
-            <div class="card-features">
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-moon"/></svg> Astrology</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-cards"/></svg> Tarot</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#6a2828"><use href="#ic-chat"/></svg> Chat &amp; Video</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-sparkle"/></svg> Clairvoyants</span>
-            </div>
+            <p class="card-desc">Modern psychic platform with 900+ vetted readers offering real-time chat, phone, and video consultations with a 91.5% prediction accuracy.</p>
+            <ul class="card-points">
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> 91.5% prediction accuracy rated by real users</li>
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> Instant access — no appointment needed</li>
+            </ul>
             <div class="card-offer">
               <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               $30 FREE on Your First Reading
@@ -1362,19 +1338,14 @@
             </div>
             <div class="votes-text"><strong>32,319</strong> votes</div>
           </div>
-          <div class="card-btns">
-            <a href="https://10bestpsychicreaders.com/redirect/364/25610/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Get $30 free at Purple Garden — opens in new tab">
-            Get $30 Free
+          <a href="https://10bestpsychicreaders.com/redirect/364/25610/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener">
+            Connect Now
             <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-arrow-right"/></svg>
           </a>
-          </div>
         </div>
       </div>
       <div class="card-footer">
-        <div class="card-footer-note">
-          <svg class="icon" width="13" height="13" stroke="currentColor" aria-hidden="true"><use href="#ic-chat"/></svg>
-          Instant access — no appointment needed
-        </div>
+        <a href="https://10bestpsychicreaders.com/redirect/364/25610/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="card-footer-link" target="_blank" rel="sponsored noopener">Visit Site ↗</a>
         <a href="#purple-garden-review" class="card-footer-link">Read full review →</a>
       </div>
     </li>
@@ -1384,18 +1355,17 @@
       <div class="card-inner">
         <div class="rank-number" aria-label="Rank 4">4</div>
         <div class="card-body">
-          <div class="card-logo-wrap" aria-label="Keen Psychics logo">
-            <div class="card-logo-text" style="color:var(--rose);font-size:17px;font-weight:800;letter-spacing:0.04em">KEEN</div>
+          <div class="card-logo-wrap">
+            <img class="card-logo-img" src="https://www.google.com/s2/favicons?domain=keen.com&sz=128" alt="Keen">
+            <div class="card-logo-text">KEEN</div>
           </div>
           <div class="card-info">
             <div class="card-name">Keen Psychics</div>
-            <div class="card-tagline">Over 20 years of trusted online psychic readings</div>
-            <div class="card-features">
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-phone"/></svg> Phone 24/7</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-chat"/></svg> Live Chat</span>
-              <span class="feature-pill gold-pill"><svg width="10" height="10" stroke="#7a2020"><use href="#ic-clock"/></svg> 20+ Years</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-heart"/></svg> Relationship Experts</span>
-            </div>
+            <p class="card-desc">Established online psychic network with thousands of experienced advisors available around the clock via phone and live chat.</p>
+            <ul class="card-points">
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> Over 20 years of trusted psychic readings</li>
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> Available by phone or chat, 24 hours a day</li>
+            </ul>
             <div class="card-offer">
               <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               5 Minutes For Just $1 — New Users Only
@@ -1415,19 +1385,14 @@
             </div>
             <div class="votes-text"><strong>29,002</strong> votes</div>
           </div>
-          <div class="card-btns">
-            <a href="https://10bestpsychicreaders.com/redirect/358/24923/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Start reading at Keen for $1 — opens in new tab">
-            Start for $1
+          <a href="https://10bestpsychicreaders.com/redirect/358/24923/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener">
+            Connect Now
             <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-arrow-right"/></svg>
           </a>
-          </div>
         </div>
       </div>
       <div class="card-footer">
-        <div class="card-footer-note">
-          <svg class="icon" width="13" height="13" stroke="currentColor" aria-hidden="true"><use href="#ic-phone"/></svg>
-          Available by phone or chat, 24 hours a day
-        </div>
+        <a href="https://10bestpsychicreaders.com/redirect/358/24923/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="card-footer-link" target="_blank" rel="sponsored noopener">Visit Site ↗</a>
         <a href="#keen-review" class="card-footer-link">Read full review →</a>
       </div>
     </li>
@@ -1437,18 +1402,16 @@
       <div class="card-inner">
         <div class="rank-number" aria-label="Rank 5">5</div>
         <div class="card-body">
-          <div class="card-logo-wrap" aria-label="PathForward logo">
-            <div class="card-logo-text">Path<span class="logo-accent">Forward</span></div>
+          <div class="card-logo-wrap">
+            <img class="card-logo-img" src="https://www.pathforward.com/wp-content/uploads/2022/02/PathForward-Logo_FINAL-2.png" alt="PathForward">
           </div>
           <div class="card-info">
             <div class="card-name">PathForward</div>
-            <div class="card-tagline">Qualified mediums and tarot readers with a 100% satisfaction guarantee</div>
-            <div class="card-features">
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-sparkle"/></svg> Mediums</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-cards"/></svg> Tarot</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#6a2828"><use href="#ic-thumbs-up"/></svg> Money-Back</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-verified"/></svg> Qualified Readers</span>
-            </div>
+            <p class="card-desc">Affordable psychic reading service with carefully vetted mediums and tarot readers. Every session is backed by a 100% satisfaction guarantee.</p>
+            <ul class="card-points">
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> New customers get first 5 minutes free</li>
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> Money-back satisfaction guarantee</li>
+            </ul>
             <div class="card-offer">
               <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               $0.83/min + 5 Minutes FREE for New Customers
@@ -1468,19 +1431,14 @@
             </div>
             <div class="votes-text"><strong>23,613</strong> votes</div>
           </div>
-          <div class="card-btns">
-            <a href="tel:8662899938" class="btn-call" aria-label="Call PathForward">
-              <svg class="icon" width="14" height="14"><use href="#ic-phone"/></svg>
-              Call Now
-            </a>
-            <a href="https://10bestpsychicreaders.com/redirect/360/14144/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Try PathForward free — opens in new tab">
-            Try 5 Min Free
+          <a href="https://10bestpsychicreaders.com/redirect/360/14144/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener">
+            Connect Now
             <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-arrow-right"/></svg>
           </a>
-          </div>
         </div>
       </div>
       <div class="card-footer">
+        <a href="https://10bestpsychicreaders.com/redirect/360/14144/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="card-footer-link" target="_blank" rel="sponsored noopener">Visit Site ↗</a>
         <a href="#pathforward-review" class="card-footer-link">Read full review →</a>
       </div>
     </li>
@@ -1496,18 +1454,17 @@
       <div class="card-inner">
         <div class="rank-number" aria-label="Rank 6">6</div>
         <div class="card-body">
-          <div class="card-logo-wrap" aria-label="Spiritual Blossom logo">
-            <div class="card-logo-text" style="color:var(--bark)">Spiritual<br>Blossom</div>
+          <div class="card-logo-wrap">
+            <img class="card-logo-img" src="https://www.google.com/s2/favicons?domain=spiritualblossom.com&sz=128" alt="Spiritual Blossom">
+            <div class="card-logo-text">SPIRITUAL BLOSSOM</div>
           </div>
           <div class="card-info">
             <div class="card-name">Spiritual Blossom</div>
-            <div class="card-tagline">Specializing in tarot, astrology, and personal truth-seeking</div>
-            <div class="card-features">
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-moon"/></svg> Astrology</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-cards"/></svg> Tarot</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#6a2828"><use href="#ic-leaf"/></svg> Holistic</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-crystal"/></svg> Psychic Guidance</span>
-            </div>
+            <p class="card-desc">Holistic spiritual guidance platform specializing in tarot, astrology, and personal truth-seeking to help you connect with your true self.</p>
+            <ul class="card-points">
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> Specializing in tarot and astrology readings</li>
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> Personalized spiritual growth guidance</li>
+            </ul>
             <div class="card-offer">
               <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               Deposit $10 &amp; Receive an Additional $4 Credit
@@ -1527,19 +1484,14 @@
             </div>
             <div class="votes-text"><strong>21,446</strong> votes</div>
           </div>
-          <div class="card-btns">
-            <a href="https://10bestpsychicreaders.com/redirect/20172/24299/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Get started with Spiritual Blossom — opens in new tab">
-            Get Started
+          <a href="https://10bestpsychicreaders.com/redirect/20172/24299/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener">
+            Connect Now
             <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-arrow-right"/></svg>
           </a>
-          </div>
         </div>
       </div>
       <div class="card-footer">
-        <div class="card-footer-note">
-          <svg class="icon" width="13" height="13" stroke="currentColor" aria-hidden="true"><use href="#ic-leaf"/></svg>
-          Ideal for holistic spiritual exploration and life guidance
-        </div>
+        <a href="https://10bestpsychicreaders.com/redirect/20172/24299/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="card-footer-link" target="_blank" rel="sponsored noopener">Visit Site ↗</a>
         <a href="#spiritual-blossom-review" class="card-footer-link">Read full review →</a>
       </div>
     </li>
@@ -1549,18 +1501,17 @@
       <div class="card-inner">
         <div class="rank-number" aria-label="Rank 7">7</div>
         <div class="card-body">
-          <div class="card-logo-wrap" aria-label="Kasamba logo">
-            <div class="card-logo-text" style="color:var(--sienna);font-weight:800;letter-spacing:0.04em">KASAMBA</div>
+          <div class="card-logo-wrap">
+            <img class="card-logo-img" src="https://www.google.com/s2/favicons?domain=kasamba.com&sz=128" alt="Kasamba">
+            <div class="card-logo-text">KASAMBA</div>
           </div>
           <div class="card-info">
             <div class="card-name">Kasamba</div>
-            <div class="card-tagline">Confidential chat sessions with certified expert readers</div>
-            <div class="card-features">
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-lock"/></svg> 100% Private</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-sparkle"/></svg> Mediums</span>
-              <span class="feature-pill teal-pill"><svg width="10" height="10" stroke="#6a2828"><use href="#ic-chat"/></svg> Chat Sessions</span>
-              <span class="feature-pill"><svg width="10" height="10" stroke="currentColor"><use href="#ic-cards"/></svg> Tarot</span>
-            </div>
+            <p class="card-desc">Global psychic advisory network offering diverse reading styles. Confidential chat sessions with certified expert readers and saved transcripts.</p>
+            <ul class="card-points">
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> 3 free minutes for new customers</li>
+              <li><svg class="icon" width="15" height="15"><use href="#ic-check"/></svg> Chat transcripts saved for future reference</li>
+            </ul>
             <div class="card-offer">
               <svg class="icon" width="14" height="14" stroke="var(--bark)"><use href="#ic-gift"/></svg>
               3 Free Minutes + 50% OFF First Session
@@ -1580,19 +1531,14 @@
             </div>
             <div class="votes-text"><strong>24,954</strong> votes</div>
           </div>
-          <div class="card-btns">
-            <a href="https://10bestpsychicreaders.com/redirect/353/27466/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener" aria-label="Save 50% at Kasamba — opens in new tab">
-            Save 50% Now
+          <a href="https://10bestpsychicreaders.com/redirect/353/27466/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="btn-visit outline-cta" target="_blank" rel="sponsored noopener">
+            Connect Now
             <svg class="icon" width="14" height="14" stroke="currentColor"><use href="#ic-arrow-right"/></svg>
           </a>
-          </div>
         </div>
       </div>
       <div class="card-footer">
-        <div class="card-footer-note">
-          <svg class="icon" width="13" height="13" stroke="currentColor" aria-hidden="true"><use href="#ic-chat"/></svg>
-          Chat transcripts saved — revisit any session anytime
-        </div>
+        <a href="https://10bestpsychicreaders.com/redirect/353/27466/3381432?pageID=390639&providerVertical=1797&providerListName=list-1" class="card-footer-link" target="_blank" rel="sponsored noopener">Visit Site ↗</a>
         <a href="#kasamba-review" class="card-footer-link">Read full review →</a>
       </div>
     </li>
