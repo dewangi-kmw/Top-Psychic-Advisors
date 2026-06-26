@@ -784,23 +784,68 @@
     .hero-stat-divider{display:none}
     .hero-particles{display:none}
     .filter-section{top:62px}
-    .card-inner{grid-template-columns:42px 1fr;padding:22px 18px 16px}
-    .card-cta-col{
-      grid-column:1/-1;flex-direction:row;
-      align-items:center;justify-content:space-between;
-      padding-left:0;padding-top:16px;
-      border-top:1px solid var(--border);margin-top:6px;
+
+    .card-inner{
+      display:grid;
+      grid-template-columns:1fr;
+      padding:38px 16px 16px;
+      gap:0;
     }
-    .rank-number{font-size:28px}
-    .card-logo-wrap{width:92px;height:46px}
+    .rank-number{display:none}
+
+    .card-body{
+      grid-column:1;grid-row:1;
+      display:flex;align-items:flex-start;gap:12px;
+      min-width:0;
+    }
+    .card-logo-wrap{width:72px;height:40px;flex-shrink:0}
+    .card-info{flex:1;min-width:0}
+    .card-name{font-size:15px}
+    .card-tagline{font-size:12.5px;margin-bottom:8px}
+    .card-features{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+    .feature-pill{font-size:10px;padding:2px 7px}
+    .card-offer{font-size:11.5px;padding:5px 10px}
+
+    .card-cta-col{display:contents}
+
+    .score-wrap{
+      grid-column:1;grid-row:2;
+      margin-top:14px;padding-top:14px;
+      border-top:1px solid var(--border);
+      text-align:center;min-width:unset;
+    }
+    .score-label{margin-bottom:2px;display:block}
+    .score-val{font-size:30px}
+    .score-stars{display:flex;justify-content:center;gap:2px;margin-top:3px}
+    .votes-text{margin-top:4px}
+
+    .btn-visit{
+      grid-column:1;grid-row:3;
+      width:100%;min-width:unset;
+      margin-top:14px;padding:14px 20px;
+      justify-content:center;
+    }
+
+    .visitors-live{
+      grid-column:1;grid-row:4;
+      justify-content:center;
+      margin-top:10px;padding-top:10px;
+      border-top:1px solid var(--border);
+    }
+
+    .card-footer{flex-direction:column;align-items:flex-start;gap:6px;padding:10px 16px}
+
     .footer-inner{grid-template-columns:1fr 1fr}
     .footer-brand{grid-column:1/-1}
-    .score-stars{display:none}
   }
   @media(max-width:480px){
-    .card-features{display:none}
     .footer-inner{grid-template-columns:1fr}
     .hero h1{font-size:38px}
+    .card-body{flex-direction:column;gap:8px}
+    .card-logo-wrap{width:100%;height:46px}
+    .feature-pill{font-size:9.5px}
+    .score-wrap{min-width:70px;padding-left:10px}
+    .score-val{font-size:26px}
   }
 
   /* ── ANIMATIONS ── */
